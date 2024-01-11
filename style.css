@@ -95,8 +95,8 @@ main {
 
 /* about section starts here */
 #about {
-  height: 90vh;
   display: flex;
+  height: 90vh;
   justify-content: space-between;
 }
 #about .about-image {
@@ -194,12 +194,48 @@ main {
 /* about section ends here */
 
 /* services section starts here */
+#services {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
 #services h1 {
   font-size: 35px;
 }
 #services .services-container {
   display: flex;
+  justify-content: space-between;
   gap: 2vw;
+  perspective: 2000px;
 }
+#services .services-container div {
+  border: 1px solid #264a99;
+  box-shadow: 0.3vw 0.3vw 0.3vw rgba(0, 0, 0, 0.4);
+  border-radius: 1vw;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+#services .services-container div:hover {
+  background-color: #407bff;
+  /* #e33ed9 */
+  color: #f1f1f1;
+  border: none;
+}
+#services .services-container div i {
+  font-size: 2vw;
+  padding: 1vw;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+  background-color: #264a99;
+  color: #f1f1f1;
+}
+
 /* services section ends here */
 /* main ends here */

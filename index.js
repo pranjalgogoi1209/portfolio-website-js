@@ -69,6 +69,7 @@ const servicesContainer = document.querySelector(".services-container");
 
 services.forEach(service => {
   const singleService = document.createElement("div");
+  singleService.setAttribute("data-tilt", "");
 
   const i = document.createElement("i");
   for (cls of service.logoClass.split(" ")) {
