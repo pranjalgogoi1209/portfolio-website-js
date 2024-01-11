@@ -3,22 +3,22 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
 }
 
 body {
   background-color: #f1f1f1;
+  color: #264a99;
 }
 
 /* header starts here */
 header {
   width: 100%;
   height: 100px;
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2vw 0 2vw;
+  box-shadow: 0 2px 5px rgba(64, 123, 255, 0.3);
 }
 .header-logo {
   background-image: url("./images/header-logo.png");
@@ -30,19 +30,37 @@ header {
 }
 nav ul {
   display: flex;
-  gap: 2vw;
+  gap: 3vw;
 }
 nav li {
   list-style-type: none;
 }
 nav a {
-  color: black;
+  color: #264a99;
   text-decoration: none;
   font-weight: bold;
+  font-size: 25px;
+  position: relative;
 }
+nav a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #407bff;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+/* header ends here */
 
 /* main starts here */
 main {
+  margin: 10px 0 10px 0;
   width: 100%;
   padding: 0 2vw 0 2vw;
 }
@@ -51,9 +69,8 @@ main {
 #home {
   display: flex;
   justify-content: flex-start;
-  border: 1px solid green;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
   background-image: url("./images/home-large-background-image.png");
   background-position: center;
   background-size: 85%;
@@ -61,7 +78,6 @@ main {
   background-attachment: fixed;
 }
 .home-intro {
-  border: 1px solid red;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -75,3 +91,109 @@ main {
 .home-intro h1 {
   font-size: 50px;
 }
+/* home section ends here */
+
+/* about section starts here */
+#about {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+#about .about-image {
+  border: 1px solid black;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
+
+#about .about-image img {
+  border: 1px solid orange;
+  height: 300px;
+  width: 100%;
+}
+#about .about-image-headline {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+#about .about-image-headline p {
+  line-height: 4.5vh;
+  word-spacing: 0.3vw;
+}
+#about .about-image h1 {
+  font-size: 25px;
+}
+
+#about .about-content {
+  border: 1px solid black;
+  width: 70%;
+  padding: 0 1vw 0 1.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
+#about .about-content-head {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+#about .about-content h1 {
+  font-size: 25px;
+}
+#about .about-content p {
+  text-align: justify;
+  line-height: 4.5vh;
+  word-spacing: 0.3vw;
+}
+#about .tab-links {
+  display: flex;
+  gap: 2vw;
+}
+#about .tab-links li {
+  list-style-type: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  position: relative;
+  font-size: 18px;
+}
+#about .tab-links li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #407bff;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+#about .tab-links .tab-link-active::after {
+  width: 100%;
+}
+#about .tab-content {
+  padding-left: 15px;
+}
+#about .skills-content {
+  display: block;
+}
+#about .skills-content strong,
+.experiences-content strong,
+.educations-content strong {
+  font-size: 13px;
+}
+#about .skills-content ul li,
+.experiences-content ul li,
+.educations-content ul li {
+  margin-top: 1vh;
+  line-height: 4.5vh;
+  word-spacing: 0.3vw;
+}
+#about .experiences-content,
+#about .educations-content {
+  display: none;
+}
+
+/* about section ends here */
+/* main ends here */
