@@ -70,7 +70,7 @@ main {
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 110px);
   background-image: url("./images/home-large-background-image.png");
   background-position: center;
   background-size: 85%;
@@ -95,12 +95,11 @@ main {
 
 /* about section starts here */
 #about {
+  height: 90vh;
   display: flex;
-  height: 100vh;
   justify-content: space-between;
 }
 #about .about-image {
-  border: 1px solid black;
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -108,7 +107,6 @@ main {
 }
 
 #about .about-image img {
-  border: 1px solid orange;
   height: 300px;
   width: 100%;
 }
@@ -126,7 +124,6 @@ main {
 }
 
 #about .about-content {
-  border: 1px solid black;
   width: 70%;
   padding: 0 1vw 0 1.5vw;
   display: flex;
@@ -139,7 +136,7 @@ main {
   gap: 1vw;
 }
 #about .about-content h1 {
-  font-size: 25px;
+  font-size: 35px;
 }
 #about .about-content p {
   text-align: justify;
@@ -194,6 +191,15 @@ main {
 #about .educations-content {
   display: none;
 }
-
 /* about section ends here */
+
+/* services section starts here */
+#services h1 {
+  font-size: 35px;
+}
+#services .services-container {
+  display: flex;
+  gap: 2vw;
+}
+/* services section ends here */
 /* main ends here */

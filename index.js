@@ -42,3 +42,47 @@ tabLinks.addEventListener("click", e => {
     }
   }
 });
+
+// services cart
+const services = [
+  {
+    logoClass: "fa-solid fa-code",
+    title: "Frontend Development",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum minima voluptatum consectetur natus molestiae!",
+  },
+  {
+    logoClass: "fa-solid fa-palette",
+    title: "UI/UX Development",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum minima voluptatum consectetur natus molestiae!",
+  },
+  {
+    logoClass: "fa-solid fa-pen",
+    title: "Editing",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum minima voluptatum consectetur natus molestiae!",
+  },
+];
+
+const servicesContainer = document.querySelector(".services-container");
+
+services.forEach(service => {
+  const singleService = document.createElement("div");
+
+  const i = document.createElement("i");
+  for (cls of service.logoClass.split(" ")) {
+    i.classList.add(cls);
+  }
+  singleService.appendChild(i);
+
+  const h2 = document.createElement("h2");
+  h2.innerText = service.title;
+  singleService.appendChild(h2);
+
+  const p = document.createElement("p");
+  p.innerText = service.description;
+  singleService.appendChild(p);
+
+  servicesContainer.appendChild(singleService);
+});
