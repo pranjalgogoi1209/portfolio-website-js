@@ -87,3 +87,57 @@ services.forEach(service => {
 
   servicesContainer.appendChild(singleService);
 });
+
+// projects carts
+const projects = [
+  {
+    img: "./images/landing-page.png",
+    title: "Landing Page",
+    description: "It is Landing Page",
+    logoClass: "fa-solid fa-up-right-from-square",
+  },
+
+  {
+    img: "./images/sticky-notes.png",
+    title: "Draggable Sticky Notes",
+    description: "It is best Sticky Notes app",
+    logoClass: "fa-solid fa-up-right-from-square",
+  },
+  {
+    img: "./images/live-chat-app.png",
+    title: "Live Chat App",
+    description: "It is best live chat app",
+    logoClass: "fa-solid fa-up-right-from-square",
+  },
+];
+
+const projectsContainer = document.querySelector(".projects-container");
+projects.forEach(project => {
+  const singleProject = document.createElement("div");
+  singleProject.classList.add("single-project");
+
+  const img = document.createElement("img");
+  img.setAttribute("src", project.img);
+  singleProject.appendChild(img);
+
+  const singleProjectContent = document.createElement("div");
+  singleProjectContent.classList.add("single-project-content");
+
+  const title = document.createElement("h2");
+  title.innerText = project.title;
+  singleProjectContent.appendChild(title);
+
+  const description = document.createElement("p");
+  description.innerText = project.description;
+  singleProjectContent.appendChild(description);
+
+  const i = document.createElement("i");
+  for (cls of project.logoClass.split(" ")) {
+    i.classList.add(cls);
+  }
+  singleProjectContent.appendChild(i);
+
+  singleProject.appendChild(singleProjectContent);
+
+  projectsContainer.appendChild(singleProject);
+});

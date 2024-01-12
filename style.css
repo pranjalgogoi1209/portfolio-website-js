@@ -12,6 +12,11 @@ body {
 
 /* header starts here */
 header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background-color: #f1f1f1;
   width: 100%;
   height: 100px;
   display: flex;
@@ -67,10 +72,11 @@ main {
 
 /* home section starts here */
 #home {
+  border: 1px solid black;
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 10px);
   background-image: url("./images/home-large-background-image.png");
   background-position: center;
   background-size: 85%;
@@ -95,17 +101,18 @@ main {
 
 /* about section starts here */
 #about {
+  border: 1px solid black;
   display: flex;
+  margin-top: 3vw;
   height: 90vh;
   justify-content: space-between;
 }
 #about .about-image {
-  width: 30%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   gap: 3vw;
 }
-
 #about .about-image img {
   height: 300px;
   width: 100%;
@@ -114,6 +121,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1vw;
+  text-align: justify;
 }
 #about .about-image-headline p {
   line-height: 4.5vh;
@@ -124,7 +132,7 @@ main {
 }
 
 #about .about-content {
-  width: 70%;
+  width: 65%;
   padding: 0 1vw 0 1.5vw;
   display: flex;
   flex-direction: column;
@@ -195,7 +203,8 @@ main {
 
 /* services section starts here */
 #services {
-  margin-top: 2vw;
+  border: 1px solid black;
+  margin-top: 3vw;
   display: flex;
   flex-direction: column;
   gap: 2vw;
@@ -205,13 +214,12 @@ main {
 }
 #services .services-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2vw;
   perspective: 2000px;
 }
 #services .services-container div {
-  border: 1px solid #264a99;
-  box-shadow: 0.3vw 0.3vw 0.3vw rgba(0, 0, 0, 0.4);
+  box-shadow: 0vw 0vw 0.5vw rgba(38, 74, 153, 0.5);
   border-radius: 1vw;
   padding: 2vw;
   display: flex;
@@ -220,7 +228,9 @@ main {
   align-items: center;
   text-align: center;
   cursor: pointer;
-  transition: all ease 0.5s;
+  width: 31%;
+  height: 39vh;
+  transition: background 0.5s;
 }
 #services .services-container div:hover {
   background-color: #407bff;
@@ -236,6 +246,72 @@ main {
   background-color: #264a99;
   color: #f1f1f1;
 }
-
 /* services section ends here */
+
+/* projects section starts here */
+#projects {
+  /* border: 1px solid black; */
+  margin-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+#projects h1 {
+  font-size: 35px;
+}
+#projects .projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+#projects .single-project {
+  box-shadow: 0;
+  width: 20vw;
+  position: relative;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  overflow: hidden;
+  width: 31%;
+  height: 39vh;
+  border-radius: 1vw;
+  box-shadow: 0vw 0vw 0.5vw rgba(38, 74, 153, 0.5);
+}
+#projects img {
+  transition: all 0.5s;
+  border-radius: 1vw;
+  width: 100%;
+  height: 100%;
+}
+#projects .single-project-content {
+  background: linear-gradient(rgba(64, 123, 255, 0.3), #264a99);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  justify-content: center;
+  align-items: center;
+  transition: height ease 0.5s;
+  overflow: hidden;
+  border-radius: 1vw;
+  color: #f1f1f1;
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+#projects .single-project:hover img {
+  transform: scale(1.1);
+}
+#projects .single-project:hover .single-project-content {
+  height: 100%;
+}
+#projects i {
+  padding: 1vw;
+  background-color: #f1f1f1;
+  color: #264a99;
+  border-radius: 50%;
+  text-shadow: none;
+}
+
+/* projects section ends here */
 /* main ends here */
