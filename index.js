@@ -89,7 +89,7 @@ services.forEach(service => {
 });
 
 // projects carts
-const projects = [
+const featuredProjects = [
   {
     img: "./images/landing-page.png",
     title: "Landing Page",
@@ -111,8 +111,33 @@ const projects = [
   },
 ];
 
-const projectsContainer = document.querySelector(".projects-container");
-projects.forEach(project => {
+const seeAllProjects = [
+  {
+    img: "./images/live-chat-app.png",
+    title: "E-Commerce",
+    description: "It is best E-commerce",
+    logoClass: "fa-solid fa-up-right-from-square",
+  },
+
+  {
+    img: "./images/live-chat-app.png",
+    title: "Dice Game",
+    description: "It is best Dice Game",
+    logoClass: "fa-solid fa-up-right-from-square",
+  },
+  {
+    img: "./images/live-chat-app.png",
+    title: "Currency Converted App",
+    description: "It is best Currency Converter App",
+    logoClass: "fa-solid fa-up-right-from-square",
+  },
+];
+
+const showProjects = (project, projectsContainerClass) => {
+  const projectsContainer = document.querySelector(
+    `.${projectsContainerClass}`
+  );
+
   const singleProject = document.createElement("div");
   singleProject.classList.add("single-project");
 
@@ -140,4 +165,31 @@ projects.forEach(project => {
   singleProject.appendChild(singleProjectContent);
 
   projectsContainer.appendChild(singleProject);
+};
+
+// featured projects
+featuredProjects.forEach(project => {
+  showProjects(project, "projects-container-one");
+});
+
+// see all and see less feature
+const projectsButton = document.querySelector(".projects-button");
+projectsButton.addEventListener("click", e => {
+  const projectsContainerTwo = document.querySelector(
+    ".projects-container-two"
+  );
+  if (e.target.innerText === "See All") {
+    seeAllProjects.forEach(project => {
+      showProjects(project, "projects-container-two");
+    });
+    projectsButton.innerText = "See Less";
+    console.log("see All working");
+    projectsContainerTwo.parentElement.style.gap = "2vw";
+  } else {
+    projectsContainerTwo.innerText = "";
+    projectsContainerTwo.parentElement.style.gap = "0vw";
+
+    projectsButton.innerText = "See All";
+    console.log("see less working");
+  }
 });
