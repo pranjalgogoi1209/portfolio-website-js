@@ -27,9 +27,12 @@
       <!-- home section starts here -->
       <section id="home">
         <div class="home-intro">
-          <p>FRONTEND DEVELOPER</p>
-          <h1>Hi, I'am Pranjal Gogoi</h1>
-          <h1>From Assam, India</h1>
+          <p>Hello,</p>
+          <h1>I'am <span class="typing"></span></h1>
+          <p>From Assam, India</p>
+          <button type="submit">
+            <a href="./images/pranjal-resume.pdf" download>Download Resume</a>
+          </button>
         </div>
       </section>
       <!-- home section ends here -->
@@ -151,10 +154,57 @@
         <button class="projects-button">See All</button>
       </div>
       <!-- projects section ends here -->
+
+      <!-- contact section starts here -->
+      <div id="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-container">
+          <div class="contact-container-one">
+            <a href="mailto:gogoipranjal2022@gmail.com"
+              ><i class="fa-solid fa-envelope"></i>gogoipranjal2022@gmail.com</a
+            >
+            <a href="tel:+917086676284"
+              ><i class="fa-solid fa-phone"></i>7086676284</a
+            >
+            <div class="social-links">
+              <a href="">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-github fa-bounce"></i>
+              </a>
+            </div>
+            <button type="submit">
+              <a href="./images/pranjal-resume.pdf" download>Download Resume</a>
+            </button>
+          </div>
+          <div class="contact-container-two">
+            <input type="text" placeholder="Enter your name..." />
+            <input type="mail" placeholder="Enter your email..." />
+            <textarea
+              cols="10"
+              rows="7"
+              placeholder="Enter your message..."
+            ></textarea>
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+      <!-- contact section ends here -->
     </main>
     <footer></footer>
 
     <script src="index.js"></script>
     <script type="text/javascript" src="./vanilla-tilt.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      // type animation
+      const typed = new Typed(".typing", {
+        strings: ["Pranjal Gogoi", "Frontend Developer", "UI/UX Developer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+      });
+    </script>
   </body>
 </html>

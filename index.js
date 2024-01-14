@@ -113,7 +113,7 @@ const featuredProjects = [
 
 const seeAllProjects = [
   {
-    img: "./images/live-chat-app.png",
+    img: "./images/sticky-notes.png",
     title: "E-Commerce",
     description: "It is best E-commerce",
     logoClass: "fa-solid fa-up-right-from-square",
@@ -129,6 +129,19 @@ const seeAllProjects = [
     img: "./images/live-chat-app.png",
     title: "Currency Converted App",
     description: "It is best Currency Converter App",
+    logoClass: "fa-solid fa-up-right-from-square",
+  },
+  {
+    img: "./images/live-chat-app.png",
+    title: "E-Commerce",
+    description: "It is best E-commerce",
+    logoClass: "fa-solid fa-up-right-from-square",
+  },
+
+  {
+    img: "./images/live-chat-app.png",
+    title: "Dice Game",
+    description: "It is best Dice Game",
     logoClass: "fa-solid fa-up-right-from-square",
   },
 ];
